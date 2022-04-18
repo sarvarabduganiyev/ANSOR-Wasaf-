@@ -77,6 +77,7 @@ export default {};
 </template>
 <style scoped>
 .gridCards__box {
+  margin-top: 35px;
   display: grid;
   grid-template-columns: calc(33.3% - 8px) calc(33.3% - 8px) calc(33.3% - 8px);
   gap: 24px;
@@ -127,6 +128,7 @@ export default {};
   }
   .gridCards__box {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
   }
   .card__style {
     height: initial;
@@ -163,9 +165,13 @@ export default {};
   .gridCards__box {
     grid-template-columns: repeat(1, 1fr);
     gap: 12px;
+    margin-top: 23px;
   }
   .our__services {
     text-align: center;
+  }
+  .card__style h4 {
+    margin-top: 8px;
   }
 }
 @media (max-width: 504px) {

@@ -51,7 +51,7 @@ export default {
             </div>
           </div>
           <div class="burger__div">
-            <button  @click="toggle" class="burger__btn" v-if="toggleWord">
+            <button @click="toggle" class="burger__btn" v-if="toggleWord">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6 text-white"
@@ -234,7 +234,7 @@ export default {
   text-align: center;
   color: #133224;
 }
-.burger__btn {
+.burger__div {
   display: none;
 }
 .circle {
@@ -327,17 +327,34 @@ export default {
   .ul__links {
     flex-direction: column;
   }
+  .links__1 {
+    font-size: 19px;
+    line-height: 35px;
+  }
   .links__2,
   .links__3,
   .links__4 {
     margin-left: 0px;
     margin-top: 20px;
+    font-size: 19px;
+    line-height: 35px;
   }
   .contact__btn__box button {
     margin-left: 0px;
-    margin-top: 20px;
+    font-size: 19px;
+    line-height: 35px;
+    /* margin-top: 20px; */
+    padding: initial;
+    background: initial;
+    border: none;
+    border-radius: 0px;
+    transition: initial;
   }
-  .burger__btn {
+  .contact__btn__box button:hover {
+    background: initial;
+    color: initial;
+  }
+  .burger__div {
     display: block;
   }
   .burger__div,

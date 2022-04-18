@@ -199,6 +199,9 @@ export default {};
   .media__divs {
     margin-top: 20px;
   }
+  .iFreme__Div {
+    height: 150px;
+  }
 }
 @media (max-width: 1016px) {
   .phone__div {
@@ -215,6 +218,9 @@ export default {};
     justify-content: space-between;
     width: 100%;
   }
+  .iFreme__Div {
+    height: 120px;
+  }
 }
 @media (max-width: 794px) {
   .media__divs {
@@ -223,14 +229,21 @@ export default {};
     flex-direction: column;
     width: 100%;
   }
+  .iFreme__Div {
+    height: 100px;
+    border-radius: 0px;
+    overflow: initial;
+  }
   .media__divs h3 {
     text-align: center;
+  }
+  .footer__bottom {
+    margin-top: 40px;
   }
 }
 @media (max-width: 412px) {
   .footer__bottom {
     flex-direction: column;
-    margin-top: 80px;
     justify-content: center;
     align-items: center;
   }
@@ -239,6 +252,9 @@ export default {};
     line-height: 30px;
     padding: 0;
     margin-top: 10px;
+  }
+  .iFreme__Div {
+    height: 90px;
   }
 }
 </style>
