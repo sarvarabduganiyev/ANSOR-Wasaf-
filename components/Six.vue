@@ -193,6 +193,9 @@ export default {};
     text-align: center;
     color: #ffffff;
   }
+  .texts__div {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 875px) {

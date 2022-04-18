@@ -166,7 +166,7 @@ label {
 }
 @media (max-width: 968px) {
   .grid__div {
-    margin-top: 120px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
