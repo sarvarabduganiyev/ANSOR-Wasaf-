@@ -76,7 +76,6 @@ export default {};
   </section>
 </template>
 <style scoped>
-
 .gridCards__box {
   display: grid;
   grid-template-columns: calc(33.3% - 8px) calc(33.3% - 8px) calc(33.3% - 8px);
@@ -97,6 +96,7 @@ export default {};
   display: inline-block;
 }
 .our__services {
+  margin-top: 100px;
   font-family: "Rubik";
   font-style: normal;
   font-weight: 600;
@@ -122,6 +122,9 @@ export default {};
   color: #969998;
 }
 @media (max-width: 1094px) {
+  .our__services {
+    margin-top: 70px;
+  }
   .gridCards__box {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -130,6 +133,9 @@ export default {};
   }
 }
 @media (max-width: 800px) {
+  .our__services {
+    margin-top: 50px;
+  }
   .card__style h1 {
     font-weight: 700;
     font-size: 20px;
@@ -147,6 +153,9 @@ export default {};
     .card__style h4 {
       font-size: 14px;
       line-height: 20px;
+    }
+    .our__services {
+      margin-top: 30px;
     }
   }
 }
@@ -168,6 +177,7 @@ export default {};
     font-size: 25px;
     line-height: 160%;
     color: #2d3331;
+    margin-top: 25px;
   }
   .max__w {
     max-width: 1300px;

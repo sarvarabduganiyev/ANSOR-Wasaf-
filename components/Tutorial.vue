@@ -8,6 +8,11 @@ export default {
   methods: {
     toggle() {
       this.toggleWord = !this.toggleWord;
+      if (this.toggleWord) {
+        document.querySelector("body").style.overflow = "hidden";
+      } else {
+        document.querySelector("body").style.overflow = "initial";
+      }
     },
   },
 };
@@ -32,7 +37,7 @@ export default {
             <img src="../img/a__logo.png" alt="nav__logo" />
           </div>
           <div
-            :style="[toggleWord ? { top: '0' } : { top: '-100%' }]"
+            :style="[toggleWord ? { left: '0' } : { left: '-100%' }]"
             class="navbar__links flex items-center"
           >
             <ul class="ul__links flex items-center">
@@ -45,8 +50,24 @@ export default {
               <button>Contact</button>
             </div>
           </div>
-          <div>
-            <button @click="toggle" class="burger__btn">
+          <div class="burger__div">
+            <button  @click="toggle" class="burger__btn" v-if="toggleWord">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <button @click="toggle" v-else class="burger__btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6 text-white"
@@ -65,13 +86,23 @@ export default {
           </div>
         </nav>
       </div>
-      <div class="texts__box max__w relative z-10">
+      <!-- .scroll__btn,#container,.texts__box{
+    z-index: -1;
+  } -->
+      <div
+        :style="[toggleWord ? { zIndex: '-5' } : { zIndex: '5' }]"
+        class="texts__box max__w relative z-10"
+      >
         <h1 class="text-center">We want to work with you</h1>
         <p class="text-center">
           We are a very experienced web & mobile app development team
         </p>
       </div>
-      <div id="container" class="max__w relative z-10">
+      <div
+        id="container"
+        :style="[toggleWord ? { zIndex: '-5' } : { zIndex: '5' }]"
+        class="max__w relative z-10"
+      >
         <div class="item">
           <h1 class="inline-block lets__talk">LET’S TALK</h1>
         </div>
@@ -81,7 +112,9 @@ export default {
         <div class="circle aylana4"></div>
       </div>
       <div
+        :style="[toggleWord ? { zIndex: '-5' } : { zIndex: '5' }]"
         class="
+          scroll__btn
           max__w
           relative
           z-10
@@ -162,11 +195,9 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  /* text-fill-color: transparent; */
 }
+
 #container {
-  /* width: 600px;
-  height: 400px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,8 +218,6 @@ export default {
   padding: 0px 320px;
 }
 .lets__talk {
-  /* padding: 60px 37px; */
-  /* margin-bottom: 70px; */
   width: 120px;
   height: 120px;
   display: flex;
@@ -280,11 +309,12 @@ export default {
 @media (max-width: 869px) {
   .navbar__links {
     position: fixed;
-    top: -100%;
-    left: 0;
+    top: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
-    background: #3db079;
+    background: #000;
+    opacity: 0.7;
     color: white;
     transition: 0.3s ease;
     display: flex;
@@ -292,7 +322,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 1000px;
+    z-index: 1px;
   }
   .ul__links {
     flex-direction: column;
@@ -310,6 +340,13 @@ export default {
   .burger__btn {
     display: block;
   }
+  .burger__div,
+  .logo_box {
+    z-index: 70;
+  }
+  /* .scroll__btn,#container,.texts__box{
+    z-index: -1;
+  } */
 }
 @media (max-width: 785px) {
   .texts__box p {
