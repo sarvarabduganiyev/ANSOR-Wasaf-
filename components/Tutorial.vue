@@ -6,14 +6,21 @@ export default {
     };
   },
   methods: {
-    toggle() {
-      this.toggleWord = !this.toggleWord;
-      if (this.toggleWord) {
+    toggle() {},
+  },
+  created() {
+    window.addEventListener("click", (e) => {
+      if (
+        e.target.closest(".burger__div") ||
+        e.target.closest(".burger__btn")
+      ) {
+        this.toggleWord = !this.toggleWord;
         document.querySelector("body").style.overflow = "hidden";
       } else {
+        this.toggleWord = false;
         document.querySelector("body").style.overflow = "initial";
       }
-    },
+    });
   },
 };
 </script>
@@ -41,10 +48,16 @@ export default {
             class="navbar__links flex items-center"
           >
             <ul class="ul__links flex items-center">
-              <li><a class="nav__links links__1" href="#">About</a></li>
-              <li><a class="nav__links links__2" href="#">Portfolio</a></li>
-              <li><a class="nav__links links__3" href="#">Our services</a></li>
-              <li><a class="nav__links links__4" href="#">Contact</a></li>
+              <li><a class="nav__links links__1" href="#about">About</a></li>
+              <li>
+                <a class="nav__links links__2" href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a class="nav__links links__3" href="#service">Our services</a>
+              </li>
+              <li>
+                <a class="nav__links links__4" href="#contact">Contact</a>
+              </li>
             </ul>
             <div class="contact__btn__box">
               <button>Contact</button>
@@ -86,9 +99,6 @@ export default {
           </div>
         </nav>
       </div>
-      <!-- .scroll__btn,#container,.texts__box{
-    z-index: -1;
-  } -->
       <div
         :style="[toggleWord ? { zIndex: '-5' } : { zIndex: '5' }]"
         class="texts__box max__w relative z-10"
@@ -184,6 +194,9 @@ export default {
 }
 .texts__box {
   margin-top: 130px;
+}
+.item {
+  cursor: pointer;
 }
 .texts__box h1 {
   font-family: "Comfortaa";

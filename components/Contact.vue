@@ -2,7 +2,7 @@
 export default {};
 </script>
 <template>
-  <section>
+  <section id="contact">
     <div class="max__w">
       <div class="contact__inner">
         <div class="grid__div">

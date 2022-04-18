@@ -3,7 +3,7 @@ export default {};
 </script>
 
 <template>
-  <section class="max__w">
+  <section id="service" class="max__w">
     <div>
       <div>
         <h1 class="our__services">Our services</h1>

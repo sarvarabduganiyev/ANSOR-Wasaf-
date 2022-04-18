@@ -17,17 +17,17 @@ export default {
     });
     gsap.from(items2, {
       textContent: 0,
-      duration: 3,
+      duration: 6,
       snap: { textContent: 1 },
     });
     gsap.from(items3, {
       textContent: 0,
-      duration: 3,
+      duration: 6,
       snap: { textContent: 1 },
     });
     gsap.from(items4, {
       textContent: 0,
-      duration: 3,
+      duration: 6,
       snap: { textContent: 1 },
     });
   },
