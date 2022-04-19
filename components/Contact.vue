@@ -1,5 +1,11 @@
 <script>
-export default {};
+export default {
+  methods: {
+    defaults(e) {
+      e.preventDefault();
+    },
+  },
+};
 </script>
 <template>
   <section id="contact">
@@ -35,7 +41,7 @@ export default {};
               <input type="number" class="inputNumber" />
               <label class="area__label">Text</label>
               <textarea class="textArea"></textarea>
-              <button class="send__btn">Send</button>
+              <button @click="defaults" class="send__btn">Send</button>
             </form>
           </div>
         </div>

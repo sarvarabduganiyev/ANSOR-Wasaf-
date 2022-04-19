@@ -10,28 +10,29 @@ export default {
     const items2 = document.querySelector(".numberCard__span2");
     const items3 = document.querySelector(".numberCard__span3");
     const items4 = document.querySelector(".numberCard__span4");
-    gsap.from(items1, {
-      textContent: 0,
-      duration: 3,
-      snap: { textContent: 1 },
-    });
-    gsap.from(items2, {
-      textContent: 0,
-      duration: 6,
-      snap: { textContent: 1 },
-    });
-    gsap.from(items3, {
-      textContent: 0,
-      duration: 6,
-      snap: { textContent: 1 },
-    });
-    gsap.from(items4, {
-      textContent: 0,
-      duration: 6,
-      snap: { textContent: 1 },
-    });
-  },
-};
+  
+      gsap.from(items1, {
+        textContent: 0,
+        duration: 3,
+        snap: { textContent: 1 },
+      });
+      gsap.from(items2, {
+        textContent: 0,
+        duration: 6,
+        snap: { textContent: 1 },
+      });
+      gsap.from(items3, {
+        textContent: 0,
+        duration: 6,
+        snap: { textContent: 1 },
+      });
+      gsap.from(items4, {
+        textContent: 0,
+        duration: 6,
+        snap: { textContent: 1 },
+      });
+    }
+  };
 </script>
 <template>
   <section>

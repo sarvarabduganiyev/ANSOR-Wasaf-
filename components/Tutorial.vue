@@ -1,5 +1,7 @@
 <script>
+import Scroll from "./small/Scroll.vue";
 export default {
+  components: { Scroll },
   data() {
     return {
       toggleWord: false,
@@ -136,13 +138,13 @@ export default {
           relative
           z-10
           flex flex-col
-          animate-bounce
           items-end
           justify-center
           bottom-20
         "
       >
-        <img src="../img/scroll.png" alt="scroll" />
+        <!-- <img src="../img/scroll.png" alt="scroll" /> -->
+        <Scroll />
       </div>
     </div>
   </div>
@@ -268,17 +270,17 @@ export default {
 }
 
 .aylana1 {
-  animation: scaleIn 2.3s infinite;
+  animation: scaleIn 1.3s infinite;
   animation-delay: 2.5s;
 }
 
 .aylana2 {
-  animation: scaleIn 2.3s infinite;
+  animation: scaleIn 1.3s infinite;
   animation-delay: 3s;
 }
 
 .aylana3 {
-  animation: scaleIn 2.3s infinite;
+  animation: scaleIn 1.3s infinite;
   animation-delay: 3.5s;
 }
 
