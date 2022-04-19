@@ -144,7 +144,9 @@ export default {
         "
       >
         <!-- <img src="../img/scroll.png" alt="scroll" /> -->
-        <Scroll />
+        <div class="scrollDiv__box">
+          <Scroll />
+        </div>
       </div>
     </div>
   </div>
@@ -401,6 +403,9 @@ export default {
 @media (max-width: 550px) {
   .logo_box img {
     width: 150px;
+  }
+  .scrollDiv__box {
+    display: none;
   }
 }
 @media (max-width: 435px) {
